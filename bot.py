@@ -141,4 +141,4 @@ async def search(message: types.Message):
     await message.reply(f"🔍 正在搜索包含【{keyword}】的资料…（用 Telegram 搜索功能辅助）")
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)
+    executor.start_polling(dp, skip_updates=True, drop_pending_updates=True)
